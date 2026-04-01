@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Digital Keepsake - Para Ti</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#0f0e0f",
+              "on-secondary": "#fff7f7",
+              "error-dim": "#6b0221",
+              "on-surface": "#353134",
+              "surface-container-low": "#f8f2f3",
+              "secondary-container": "#ffd9e4",
+              "outline": "#7e797c",
+              "on-secondary-fixed-variant": "#7d4d5f",
+              "surface-container-highest": "#e8e1e3",
+              "tertiary": "#715578",
+              "primary-container": "#fd6c9c",
+              "surface-bright": "#fef8f9",
+              "tertiary-fixed": "#f5d1fb",
+              "surface": "#fef8f9",
+              "on-tertiary-fixed": "#4c3253",
+              "on-primary-fixed": "#000000",
+              "on-primary": "#fff7f7",
+              "error": "#a8364b",
+              "on-secondary-container": "#724456",
+              "primary-fixed-dim": "#ec5f8f",
+              "surface-variant": "#e8e1e3",
+              "on-error-container": "#6e0523",
+              "surface-tint": "#ac2d5e",
+              "on-surface-variant": "#625e60",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#ede6e8",
+              "on-tertiary": "#fff7fb",
+              "on-tertiary-container": "#604567",
+              "surface-container": "#f3ecee",
+              "primary-fixed": "#fd6c9c",
+              "tertiary-fixed-dim": "#e7c3ed",
+              "tertiary-dim": "#65496c",
+              "inverse-primary": "#fd6c9c",
+              "on-background": "#353134",
+              "secondary-fixed-dim": "#ffc5d8",
+              "secondary-dim": "#734557",
+              "background": "#fef8f9",
+              "surface-dim": "#dfd8db",
+              "secondary-fixed": "#ffd9e4",
+              "on-tertiary-fixed-variant": "#6a4e71",
+              "outline-variant": "#b6b0b3",
+              "on-primary-container": "#47001f",
+              "on-primary-fixed-variant": "#590029",
+              "on-error": "#fff7f7",
+              "on-secondary-fixed": "#5d3243",
+              "primary-dim": "#9c1f52",
+              "primary": "#ac2d5e",
+              "error-container": "#f97386",
+              "tertiary-container": "#f5d1fb",
+              "inverse-on-surface": "#a09c9d",
+              "secondary": "#815163"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-gradient-romantic {
+            background: linear-gradient(135deg, #ac2d5e 0%, #fd6c9c 100%);
+        }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 10s linear infinite;
+        }
+        .floating-heart {
+            position: absolute;
+            color: rgba(172, 45, 94, 0.15);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .letter-paper {
+            background-image: radial-gradient(#e8e1e3 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        @keyframes color-shift {
+            0% { background: linear-gradient(to bottom right, #fde68a, #ffffff, #fed7aa); }
+            25% { background: linear-gradient(to bottom right, #fca5a5, #ffffff, #fde68a); }
+            50% { background: linear-gradient(to bottom right, #fdb4d0, #ffffff, #c4b5fd); }
+            75% { background: linear-gradient(to bottom right, #a5d8ff, #ffffff, #b4f5c4); }
+            100% { background: linear-gradient(to bottom right, #fde68a, #ffffff, #fed7aa); }
+        }
+        .animate-color-shift {
+            animation: color-shift 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md shadow-[0_20px_40px_rgba(172,45,94,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-headline font-bold italic tracking-tight text-pink-700 dark:text-pink-300">
+                The Digital Keepsake
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="nav-link text-pink-700 dark:text-pink-300 border-b-2 border-pink-500 pb-1 font-headline italic font-semibold" href="#story">Our Story</a>
+<a class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-pink-500 transition-colors font-headline italic font-semibold" href="#letter">Love Letter</a>
+<a class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-pink-500 transition-colors font-headline italic font-semibold" href="#timer">Our Time</a>
+<a class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-pink-500 transition-colors font-headline italic font-semibold" href="#gallery">Gallery</a>
+<button class="text-pink-600 dark:text-pink-400 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<!-- Music Toggle -->
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full text-primary hover:bg-secondary-container transition-colors scale-95 active:scale-90" id="musicToggle">
+<span class="material-symbols-outlined" id="musicIcon">play_circle</span>
+<span class="text-xs font-bold tracking-widest uppercase" id="musicText">Music</span>
+</button>
+</div>
+</nav>
+
+<!-- Audio Player -->
+<audio id="bgMusic" loop>
+<source src="musica.mp3" type="audio/mpeg">
+Tu navegador no soporta audio HTML5.
+</audio>
+
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="fotos/girasoles.png" alt="Girasoles"/>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative z-10 text-center px-6">
+<div class="bg-white/90 backdrop-blur-md p-10 md:p-16 rounded-3xl shadow-2xl max-w-2xl mx-auto">
+<h1 class="font-headline italic text-5xl md:text-7xl font-bold text-primary tracking-tighter mb-4">
+                Para ti ❤️
+            </h1>
+<p class="text-on-surface-variant text-xl md:text-2xl font-light tracking-wide mb-8">
+                Hice esto con mucho amor
+            </p>
+<a class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-romantic text-on-primary rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition-transform active:scale-95" href="#story">
+                Haz clic aquí
+                <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Story Timeline Section -->
+<section class="py-32 bg-gradient-to-br from-pink-50 via-white to-purple-50 overflow-hidden" id="story">
+<div class="max-w-5xl mx-auto px-6">
+<h2 class="font-headline italic text-5xl font-bold text-primary mb-20 text-center">Nuestra historia</h2>
+<div class="relative space-y-24">
+<!-- Center Line -->
+<div class="absolute left-1/2 top-0 bottom-0 w-px bg-primary/20 hidden md:block"></div>
+<!-- Moment 1 -->
+<div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-16 group">
+<div class="w-full md:w-1/2 flex justify-end">
+<div class="relative w-full aspect-square md:w-72 rounded-xl overflow-hidden shadow-lg transform -rotate-2 group-hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover" src="fotos/Conocer.png" alt="El inicio"/>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full hidden md:block border-4 border-surface shadow-sm"></div>
+<div class="w-full md:w-1/2">
+<span class="font-headline italic text-primary font-bold text-2xl">El inicio</span>
+<p class="mt-4 text-on-surface-variant leading-relaxed text-lg">Dos desconocidos que no sabían que el destino ya tenía sus nombres escritos. Nos cruzamos, pero pasaron días antes de que volviéramos a encontrarnos.</p>
+</div>
+</div>
+<!-- Moment 2 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group">
+<div class="w-full md:w-1/2 flex justify-start">
+<div class="relative w-full aspect-square md:w-64 rounded-xl overflow-hidden shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover" src="fotos/hamburguesa.png" alt="Nuestra primera cita"/>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full hidden md:block border-4 border-surface shadow-sm"></div>
+<div class="w-full md:w-1/2 md:text-right">
+<span class="font-headline italic text-primary font-bold text-2xl">Nuestra primera cita</span>
+<p class="mt-4 text-on-surface-variant leading-relaxed text-lg">Los nervios, las risas y la sensación de que te conocía de toda la vida. Supe que eras especial.</p>
+</div>
+</div>
+<!-- Moment 3 -->
+<div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-16 group">
+<div class="w-full md:w-1/2 flex justify-end">
+<div class="relative w-full aspect-square md:w-72 rounded-xl overflow-hidden shadow-lg transform -rotate-1 group-hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover" src="fotos/playa.png" alt="Grandes Aventuras"/>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full hidden md:block border-4 border-surface shadow-sm"></div>
+<div class="w-full md:w-1/2">
+<span class="font-headline italic text-primary font-bold text-2xl">Grandes Aventuras</span>
+<p class="mt-4 text-on-surface-variant leading-relaxed text-lg">Cada día a tu lado es una nueva aventura. Viajes improvisados, risas infinitas y aventuras que solo nosotros entendemos.</p>
+</div>
+</div>
+<!-- Moment 4 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 group">
+<div class="w-full md:w-1/2 flex justify-start">
+<div class="relative w-full aspect-square md:w-72 rounded-xl overflow-hidden shadow-lg transform rotate-2 group-hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover" src="fotos/juntos.jpeg" alt="Hoy y siempre"/>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full hidden md:block border-4 border-surface shadow-sm"></div>
+<div class="w-full md:w-1/2 md:text-right">
+<span class="font-headline italic text-primary font-bold text-2xl">Hoy y siempre</span>
+<p class="mt-4 text-on-surface-variant leading-relaxed text-lg">Porque lo mejor está por venir. Contigo, cada mañana vale la pena y cada noche tiene sentido.</p>
+</div>
+</div>
+</section>
+<!-- Love Letter Section -->
+<section class="py-32 bg-cover bg-center bg-no-repeat relative" id="letter" style="background-image: url('fotos/gatitos.png');">
+<div class="absolute inset-0 bg-black/50"></div>
+<div class="relative z-10 max-w-3xl mx-auto px-6">
+<div class="letter-paper bg-surface-container-lowest p-12 md:p-20 rounded-lg shadow-xl relative transform -rotate-1">
+<div class="absolute -top-6 -right-6 bg-primary text-on-primary p-4 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-3xl">mail</span>
+</div>
+<h2 class="font-headline italic text-4xl font-bold text-primary mb-10">Una carta para ti 💌</h2>
+<div class="space-y-6 text-on-surface text-lg md:text-xl leading-relaxed font-body">
+<p>Mi amor,</p>
+<p>Escribir esto me hace darme cuenta de lo afortunado que soy. No hay palabras suficientes para describir cómo haces que mi corazón se sienta cada vez que me miras o cuando escucho tu risa.</p>
+<p>Eres mi refugio, mi mejor aventura y el regalo más hermoso que la vida me ha dado. Gracias por cada sonrisa, por cada abrazo y por hacer que lo ordinario se sienta extraordinario.</p>
+<p>En este nuevo mes que celebramos, solo quiero recordarte que mi amor por ti crece con cada respiración. Eres y siempre serás mi persona favorita.</p>
+<p class="pt-8 italic font-headline font-bold text-primary text-right">— Tu amor eterno</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Time Counter Section -->
+<section class="py-24 bg-gradient-to-b from-yellow-50 via-orange-100 to-pink-100 text-center px-6 relative overflow-hidden" id="timer">
+<!-- Sticky Card Container -->
+<div class="sticky top-28 z-30 max-w-4xl mx-auto">
+<!-- Glassmorphism Card -->
+<div class="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/50 p-10 md:p-14">
+<!-- Sun Icon -->
+<div class="w-20 h-20 mx-auto mb-6 relative">
+<div class="absolute inset-0 bg-gradient-to-br from-yellow-300 via-orange-400 to-pink-400 rounded-full animate-pulse shadow-lg" style="box-shadow: 0 0 30px 10px rgba(251, 191, 36, 0.4);"></div>
+<span class="material-symbols-outlined absolute inset-0 flex items-center justify-center text-4xl text-white">schedule</span>
+</div>
+<h2 class="font-headline italic text-4xl md:text-5xl font-bold text-primary mb-10">Nuestro tiempo juntos ⏳</h2>
+<!-- Timer Grid -->
+<div class="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+<div class="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-2xl border border-primary/20">
+<span class="block text-4xl md:text-5xl font-bold text-primary mb-2" id="months">0</span>
+<span class="text-on-surface-variant font-medium tracking-widest uppercase text-xs">Meses</span>
+</div>
+<div class="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-2xl border border-primary/20">
+<span class="block text-4xl md:text-5xl font-bold text-primary mb-2" id="days">0</span>
+<span class="text-on-surface-variant font-medium tracking-widest uppercase text-xs">Días</span>
+</div>
+<div class="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-2xl border border-primary/20">
+<span class="block text-4xl md:text-5xl font-bold text-primary mb-2" id="hours">0</span>
+<span class="text-on-surface-variant font-medium tracking-widest uppercase text-xs">Horas</span>
+</div>
+<div class="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-2xl border border-primary/20">
+<span class="block text-4xl md:text-5xl font-bold text-primary mb-2" id="minutes">0</span>
+<span class="text-on-surface-variant font-medium tracking-widest uppercase text-xs">Minutos</span>
+</div>
+<div class="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-2xl border border-primary/20">
+<span class="block text-4xl md:text-5xl font-bold text-primary mb-2" id="seconds">0</span>
+<span class="text-on-surface-variant font-medium tracking-widest uppercase text-xs">Segundos</span>
+</div>
+</div>
+<p class="mt-10 italic text-on-surface-variant font-headline text-lg" id="loveTimer">...y contando cada segundo ❤️</p>
+</div>
+</div>
+</div>
+<!-- Contenido de relleno para permitir scroll -->
+<div class="h-[20vh]"></div>
+</section>
+<script>
+const startDate = new Date('2024-01-01T00:00:00-05:00');
+
+function updateTimer() {
+const now = new Date();
+const diff = now - startDate;
+
+if (diff < 0) return;
+
+const totalSeconds = Math.floor(diff / 1000);
+const totalMinutes = Math.floor(totalSeconds / 60);
+const totalHours = Math.floor(totalMinutes / 60);
+const totalDays = Math.floor(totalHours / 24);
+
+const months = Math.floor(totalDays / 30.44);
+const days = Math.floor(totalDays % 30.44);
+const hours = Math.floor(totalHours % 24);
+const minutes = Math.floor(totalMinutes % 60);
+const seconds = Math.floor(totalSeconds % 60);
+
+document.getElementById('months').textContent = months;
+document.getElementById('days').textContent = days;
+document.getElementById('hours').textContent = hours;
+document.getElementById('minutes').textContent = minutes;
+document.getElementById('seconds').textContent = seconds;
+}
+
+updateTimer();
+setInterval(updateTimer, 1000);
+
+// Active nav link on scroll
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section[id]');
+
+function updateActiveNav() {
+let current = '';
+sections.forEach(section => {
+const sectionTop = section.offsetTop - 100;
+if (window.scrollY >= sectionTop) {
+current = section.getAttribute('id');
+}
+});
+
+navLinks.forEach(link => {
+link.classList.remove('text-pink-700', 'dark:text-pink-300', 'border-b-2', 'border-pink-500');
+link.classList.add('text-zinc-600', 'dark:text-zinc-400', 'hover:text-pink-500');
+if (link.getAttribute('href') === `#${current}`) {
+link.classList.add('text-pink-700', 'dark:text-pink-300', 'border-b-2', 'border-pink-500');
+link.classList.remove('text-zinc-600', 'dark:text-zinc-400', 'hover:text-pink-500');
+}
+});
+}
+
+window.addEventListener('scroll', updateActiveNav);
+
+// Music Player Control
+const musicToggle = document.getElementById('musicToggle');
+const bgMusic = document.getElementById('bgMusic');
+const musicIcon = document.getElementById('musicIcon');
+const musicText = document.getElementById('musicText');
+let isPlaying = false;
+
+musicToggle.addEventListener('click', () => {
+if (isPlaying) {
+bgMusic.pause();
+musicIcon.textContent = 'play_circle';
+musicText.textContent = 'Music';
+} else {
+bgMusic.play().catch(error => {
+console.log('No se pudo reproducir el audio:', error);
+alert('No se encontró el archivo de música. Agrega un archivo llamado "musica.mp3" en la carpeta stitch_web');
+});
+musicIcon.textContent = 'pause_circle';
+musicText.textContent = 'Pausar';
+}
+isPlaying = !isPlaying;
+});
+</script>
+<!-- Gallery Section -->
+<section class="py-32 bg-gradient-to-b from-red-400 via-blue-300/60 via-lilac-300/60 to-red-400" id="gallery">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 mb-8 shadow-lg">
+<h2 class="font-headline italic text-5xl font-bold text-primary text-center">Nuestra Galería</h2>
+</div>
+<div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 shadow-lg">
+<p class="text-center text-on-surface-variant text-lg italic">* Disclaimer: Ella casi siempre sale con los ojos cerrados... pero siempre sale guapísima ❤️</p>
+</div>
+
+<!-- Photo Grid - 4 columns -->
+<div class="columns-1 md:columns-2 lg:columns-4 gap-4 space-y-4">
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.10 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.10.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.11.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.12 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.12 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.12.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.13.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.26 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.26 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.26 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.26 (4).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.26.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.27 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.27 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.27 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.27 (4).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.27.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.28 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.28 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.28 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.28.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.29 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.29 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.29 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.29 (4).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.29 (5).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.29.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.30 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.30 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.30 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.30 (4).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.30 (5).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.30.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.31 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.31 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.31 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.31.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.32 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.32 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.32 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.32.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.33 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.33 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.33.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.34 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.34 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.34 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.34 (4).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.34.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.35 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.35 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.35.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.36 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.36 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.36 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.36 (4).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.36.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.37 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.37 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.37 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.37.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.38 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.38.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.39 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.39 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.39.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.40 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.40 (2).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.40 (3).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.40.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.41 (1).jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.41.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.42.jpeg" alt="Foto"/>
+<img class="w-full rounded-lg break-inside-avoid" src="fotos/WhatsApp Image 2026-03-31 at 10.34.43.jpeg" alt="Foto"/>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="w-full py-12 bg-zinc-100 dark:bg-zinc-900">
+<div class="flex flex-col items-center gap-6 w-full text-center">
+<div class="text-lg font-bold italic text-pink-700 font-headline">
+                The Digital Keepsake
+            </div>
+<div class="text-4xl text-pink-600 dark:text-pink-400 font-headline italic font-bold">
+                Te amo ❤️
+            </div>
+<div class="flex gap-6">
+<a class="text-zinc-500 dark:text-zinc-500 hover:text-pink-400 transition-colors font-label text-sm tracking-wide" href="#">Privacy</a>
+<a class="text-pink-700 font-bold font-label text-sm tracking-wide" href="#">Our Journey</a>
+</div>
+<p class="text-zinc-500 dark:text-zinc-500 font-label text-sm tracking-wide">
+                With love, forever &amp; always
+            </p>
+</div>
+</footer>
+</body></html>
